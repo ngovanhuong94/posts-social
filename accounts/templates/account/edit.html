@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Edit your profile{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-12-md">
+				<h1>Edit your profile</h1>
+				<form method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					{{user_form.as_p}}
+					{{profile_form.as_p}}
+					<input type="submit" value="Save changes" name="">
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

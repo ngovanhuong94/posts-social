@@ -15,6 +15,9 @@ from django.contrib.auth.views import (
 
 urlpatterns = [
 	url(r'^dashboard/$', views.dashboard, name='dashboard'),
+	url(r'^register/$', views.register, name='register'),
+	url(r'^edit/$', views.edit, name='edit'),
+
 	url(r'^login/$', login, name='login'),
 	url(r'^logout/$', logout, name='logout'),
 	url(r'^password-change$', password_change, name='password_change'),
